@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: "#da373d",
+                "bg-prim": "#1B1B1B",
+                "border-prim": "#262626",
+                orng: "#F35034",
+              },
+            },
+          },
+        };
+    </script>
+    <style>
+        .font-bd{
+            font-family: "Raleway", serif;
+        }
+    </style>
+</head>
+<body class="bg-[#020817] min-h-screen font-bd text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#151925] backdrop-blur-sm border-b border-zinc-700">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-white">Jami's</div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Projects</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Projects</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <div class="min-h-screen bg-[#151925] flex items-center">
+            <div class="max-w-6xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center justify-between gap-12">
+                <!-- Left Content -->
+                <div class="lg:w-1/2">
+                    <h1 class="text-5xl font-bold text-white mb-4">Sumsed Tareq Jami</h1>
+                    <p class="text-xl text-gray-400 mb-4">Mern Stack Web Developer</p>
+                    <p class="text-gray-400 mb-8">Explore the innovative solutions I've developed across various technologies. Each project reflects my passion for software development and commitment to continuous learning..</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="border border-gray-600 text-white px-6 py-2 rounded flex items-center gap-2 hover:border-gray-400 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                            Download CV
+                        </button>
+                        <a href="https://www.linkedin.com/in/jn-jami-1455112a9/" target="_blank" class="bg-[#0A66C2] text-white px-6 py-2 rounded flex items-center gap-2 hover:bg-[#0958a8] transition-colors">
+                            <img src="images/linkedin-icon 1 (1).svg" alt="LinkedIn" class="w-5 h-5">
+                            Connect with
+                        </a>
+                        <a href="https://github.com/Jami40" target="_blank" class="bg-[#24292F] text-white px-6 py-2 rounded flex items-center gap-2 hover:bg-[#2c3238] transition-colors">
+                            <img src="images/gh.svg" alt="GitHub" class="w-5 h-5">
+                            Explore Code
+                        </a>
+                    </div>
+                </div>
+                <!-- Right Image -->
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative w-[400px] h-[400px]">
+                        <div class="absolute inset-0 rounded-full bg-[#FF7B5C]"></div>
+                        <img 
+                            src="images/380334301_1642951886205073_80166280723183857_n (1).jpg" 
+                            alt="Sumsed Tareq Jami" 
+                            class="absolute inset-0 w-full h-full object-cover rounded-full"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- About Me Section -->
+        <div class="bg-[#151925] py-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">About Me</h2>
+                <div class="bg-zinc-800 rounded-lg p-8 border border-zinc-700">
+                    <div class="space-y-6 text-gray-300">
+                        <p class="leading-relaxed">
+                            Hello! I'm Sumsed Tareq Jami, a passionate MERN Stack developer with a deep love for creating innovative web solutions. My journey in programming began with a curiosity about how websites work, which led me to dive deep into web development.
+                        </p>
+                        <p class="leading-relaxed">
+                            I thrive on building full-stack applications that solve real-world problems. What excites me most about development is the perfect blend of logical problem-solving and creative design thinking. I particularly enjoy working on challenging projects that push me to learn new technologies and improve my skills.
+                        </p>
+                        <p class="leading-relaxed">
+                            Outside of coding, I'm an avid photographer who loves capturing moments and exploring new perspectives. I also enjoy playing cricket and chess, which help me maintain a balanced lifestyle and develop strategic thinking skills that complement my programming work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="py-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">Skills</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Frontend Skills -->
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                        <h3 class="text-xl font-semibold mb-6 text-white text-center">Frontend</h3>
+                        <div class="grid grid-cols-3 gap-6">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fab fa-react text-4xl text-[#61DAFB] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">React</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fab fa-js text-4xl text-[#F7DF1E] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">JavaScript</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fab fa-html5 text-4xl text-[#E34F26] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">HTML5</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fab fa-css3-alt text-4xl text-[#1572B6] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">CSS3</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#06B6D4">
+                                    <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+                                </svg>
+                                <span class="text-gray-300 text-sm">Tailwind</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#000000">
+                                    <path d="M11.5725 0c-.1763 0-.3098.0013-.3584.0067-.0516.0053-.2159.021-.3636.0328-3.4088.3073-6.6017 2.1463-8.624 4.9728C1.1004 6.584.3802 8.3666.1082 10.255c-.0962.659-.108.8537-.108 1.7474s.012 1.0884.108 1.7476c.652 4.506 3.8591 8.2919 8.2087 9.6945.7789.2511 1.6.4223 2.5337.5255.3636.04 1.9354.04 2.299 0 1.6117-.1783 2.9772-.577 4.3237-1.2643.2065-.1056.2464-.1337.2183-.1573-.0188-.0139-.8987-1.1938-1.9543-2.62l-1.919-2.592-2.4047-3.5583c-1.3231-1.9564-2.4117-3.556-2.4211-3.556-.0094-.0026-.0187 1.5787-.0235 3.509-.0067 3.3802-.0093 3.5162-.0516 3.596-.061.115-.108.1618-.2064.2134-.075.0374-.1408.0445-.495.0445h-.406l-.1078-.068a.4383.4383 0 01-.1572-.1712l-.0493-.1056.0053-4.703.0067-4.7054.0726-.0915c.0376-.0493.1174-.1125.1736-.143.0962-.047.1338-.0517.5396-.0517.4787 0 .5584.0187.6827.1547.0353.0377 1.3373 1.9987 2.895 4.3608a10760.433 10760.433 0 004.7344 7.1706l1.9002 2.8782.096-.0633c.8518-.5536 1.7525-1.3418 2.4657-2.1627 1.5179-1.7429 2.4963-3.868 2.8247-6.134.0961-.6591.1078-.854.1078-1.7475 0-.8937-.012-1.0884-.1078-1.7476-.6522-4.506-3.8592-8.2919-8.2087-9.6945-.7672-.2487-1.5836-.42-2.4985-.5232-.169-.0176-1.0835-.0366-1.6123-.037zm4.0685 7.217c.3473 0 .4082.0053.4857.047.1127.0562.204.1642.237.2767.0186.061.0234 1.3653.0186 4.3044l-.0067 4.2175-.7436-1.14-.7461-1.14v-3.066c0-1.982.0093-3.0963.0234-3.1502.0375-.1313.1196-.2346.2323-.2955.0961-.0494.1313-.054.4997-.054z"/>
+                                </svg>
+                                <span class="text-gray-300 text-sm">Next.js</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#00599C">
+                                    <path d="M10.465 11.993h2.015v-1.058h-2.015v1.058zm3.075 0h2.015v-1.058h-2.015v1.058zm-6.15 0h2.015v-1.058H7.39v1.058zm-3.075 0h2.015v-1.058H4.315v1.058zm6.15-2.117h2.015V8.818h-2.015v1.058zm3.075 0h2.015V8.818h-2.015v1.058zm-6.15 0h2.015V8.818H7.39v1.058zm-3.075 0h2.015V8.818H4.315v1.058zm12.3-5.29h-1.058V2.528h-1.058v2.058h-1.058v1.058h1.058v2.058h1.058V5.644h1.058V4.586zm-9.225 7.407h2.015v-1.058h-2.015v1.058zm3.075 0h2.015v-1.058h-2.015v1.058zm-6.15 0h2.015v-1.058H7.39v1.058zm-3.075 0h2.015v-1.058H4.315v1.058zm9.225-4.234h2.015V6.702h-2.015v1.058zm3.075 0h2.015V6.702h-2.015v1.058zm-6.15 0h2.015V6.702H7.39v1.058zm-3.075 0h2.015V6.702H4.315v1.058zm6.15 2.117h2.015V8.818h-2.015v1.058z"/>
+                                </svg>
+                                <span class="text-gray-300 text-sm">C</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#00599C">
+                                    <path d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.11-7.11a7.133 7.133 0 016.156 3.553l-3.076 1.78a3.567 3.567 0 00-3.08-1.78A3.56 3.56 0 008.444 12 3.56 3.56 0 0012 15.555a3.57 3.57 0 003.08-1.778l3.078 1.78A7.135 7.135 0 0112 19.11zm7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/>
+                                </svg>
+                                <span class="text-gray-300 text-sm">C++</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#FFCA28">
+                                    <path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z"/>
+                                </svg>
+                                <span class="text-gray-300 text-sm">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Skills -->
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                        <h3 class="text-xl font-semibold mb-6 text-white text-center">Backend</h3>
+                        <div class="grid grid-cols-3 gap-6">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fab fa-node-js text-4xl text-[#339933] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">Node.js</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fab fa-node-js text-4xl text-[#000000] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">Express</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#47A248">
+                                    <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"/>
+                                </svg>
+                                <span class="text-gray-300 text-sm">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                        <h3 class="text-xl font-semibold mb-6 text-white text-center">Tools</h3>
+                        <div class="grid grid-cols-3 gap-6">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fab fa-git-alt text-4xl text-[#F05032] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">Git</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fab fa-github text-4xl text-white hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">GitHub</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-code text-4xl text-[#007ACC] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">VS Code</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-terminal text-4xl text-white hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">Terminal</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#000000">
+                                    <path d="M24 22.525H0l12-21.05 12 21.05z"/>
+                                </svg>
+                                <span class="text-gray-300 text-sm">Vercel</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#3AAFA9">
+                                    <path d="M12 0L1.605 6v12L12 24l10.395-6V6L12 0zm0 1.41l9.17 5.29v10.58L12 22.59l-9.17-5.29V6.7L12 1.41zM4.5 7.5v9l7.5 4.33v-9L4.5 7.5zm15 0l-7.5 4.33v9l7.5-4.33V7.5z"/>
+                                </svg>
+                                <span class="text-gray-300 text-sm">Surge</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Skills -->
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                        <h3 class="text-xl font-semibold mb-6 text-white text-center">Other</h3>
+                        <div class="grid grid-cols-3 gap-6">
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-mobile-alt text-4xl text-[#FF7B5C] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">Responsive</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-paint-brush text-4xl text-[#FF7B5C] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">UI/UX</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <i class="fas fa-code-branch text-4xl text-[#FF7B5C] hover:scale-110 transition-transform"></i>
+                                <span class="text-gray-300 text-sm">Version Control</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="bg-[#151925] py-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">Experience</h2>
+                <div class="space-y-8">
+                    <!-- Experience Item 1 -->
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                        <div class="flex items-start gap-4">
+                            <div class="text-[#FF7B5C] text-2xl">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Junior Web Developer</h3>
+                                <p class="text-gray-400 mb-2">Freelance Projects • 2023 - Present</p>
+                                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                    <li>Developed responsive web applications using React.js and Tailwind CSS</li>
+                                    <li>Built RESTful APIs using Node.js and Express.js</li>
+                                    <li>Implemented MongoDB database solutions for data management</li>
+                                    <li>Collaborated with clients to understand requirements and deliver solutions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="bg-[#151925] py-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">Education</h2>
+                <div class="space-y-8">
+                    <!-- Education Item 1 -->
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                        <div class="flex items-start gap-4">
+                            <div class="text-[#FF7B5C] text-2xl">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Bachelor of Science in Computer Science and Engineering</h3>
+                                <p class="text-gray-400 mb-2">International Islamic University Chittagong • 2023 - Present</p>
+                                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                    <li>Currently pursuing CSE degree with focus on software development and programming</li>
+                                    <li>Started the program in January 2023</li>
+                                    <li>Actively participating in coding competitions and tech events</li>
+                                    <li>Developing strong foundation in computer science fundamentals while working on practical projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:border-zinc-600 transition-colors">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/project1.jpg" alt="Project One" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <button onclick="openModal('project1')" class="px-6 py-2 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Tech Zone</h3>
+                        <p class="text-gray-300 mb-4">A comprehensive tech gadget review platform built with MERN stack.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">React</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:border-zinc-600 transition-colors">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/project2.jpg" alt="Project Two" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <button onclick="openModal('project2')" class="px-6 py-2 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Food Fusion</h3>
+                        <p class="text-gray-300 mb-4">An online food ordering and delivery management system.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Next.js</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Firebase</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:border-zinc-600 transition-colors">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="images/project3.jpg" alt="Project Three" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <button onclick="openModal('project3')" class="px-6 py-2 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Task Master</h3>
+                        <p class="text-gray-300 mb-4">A collaborative task management and team organization platform.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">React</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Express</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Modals -->
+        <div id="project1Modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+            <div class="min-h-screen px-4 text-center">
+                <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                    <div class="absolute inset-0 bg-black opacity-75"></div>
+                </div>
+                <span class="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
+                <div class="inline-block w-full max-w-3xl p-6 my-8 text-left align-middle transition-all transform bg-zinc-800 rounded-lg border border-zinc-700 shadow-xl">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-2xl font-semibold text-white mb-4">Tech Zone</h3>
+                        <button onclick="closeModal('project1')" class="text-gray-400 hover:text-white">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <img src="images/project1.jpg" alt="Tech Zone" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Technology Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">React</span>
+                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Node.js</span>
+                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Express.js</span>
+                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">MongoDB</span>
+                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Description</h4>
+                            <p class="text-gray-300">A comprehensive tech gadget review platform where users can explore, review, and discuss the latest technology products. Features include user authentication, product reviews, ratings, and a dynamic comment system.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Links</h4>
+                            <div class="flex gap-4">
+                                <a href="https://tech-zone-demo.vercel.app" target="_blank" class="flex items-center gap-2 text-[#FF7B5C] hover:text-[#ff6b4a]">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/username/tech-zone" target="_blank" class="flex items-center gap-2 text-[#FF7B5C] hover:text-[#ff6b4a]">
+                                    <i class="fab fa-github"></i>
+                                    GitHub Repository
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Challenges Faced</h4>
+                            <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                <li>Implementing real-time comment updates using WebSocket</li>
+                                <li>Optimizing image loading and caching for better performance</li>
+                                <li>Managing complex state with multiple user interactions</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-2">Future Improvements</h4>
+                            <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                <li>Adding AI-powered product recommendations</li>
+                                <li>Implementing a price comparison feature</li>
+                                <li>Adding video reviews and demonstrations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Similar modals for Project 2 and 3 -->
+        <div id="project2Modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+            <!-- Similar structure as project1Modal -->
+        </div>
+
+        <div id="project3Modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+            <!-- Similar structure as project1Modal -->
+        </div>
+
+        <!-- Add Modal JavaScript -->
+        <script>
+            function openModal(projectId) {
+                document.getElementById(projectId + 'Modal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal(projectId) {
+                document.getElementById(projectId + 'Modal').classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+
+            // Close modal when clicking outside
+            window.onclick = function(event) {
+                if (event.target.classList.contains('fixed')) {
+                    event.target.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        </script>
+
+        <!-- Footer -->
+        <footer class="bg-zinc-800 border-t border-zinc-700">
+            <div class="max-w-6xl mx-auto px-4 py-8">
+                <div class="text-center">
+                    <p class="text-gray-300">&copy; 2025 My Portfolio. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Add JavaScript for mobile menu toggle -->
+        <script>
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+    </body>
+</html>
