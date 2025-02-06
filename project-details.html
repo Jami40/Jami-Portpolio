@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Eco Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-[#0F172A] min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-[#151925] border-b border-zinc-700 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-white text-xl font-bold">Portfolio</a>
+                <div class="flex space-x-4">
+                    <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2">Home</a>
+                    <a href="index.html#about" class="text-gray-300 hover:text-white px-3 py-2">About</a>
+                    <a href="index.html#projects" class="text-gray-300 hover:text-white px-3 py-2">Projects</a>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-white px-3 py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Details Content -->
+    <main class="flex-grow">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden">
+                <!-- Project Header -->
+                <div class="relative h-full">
+                    <img src="images/Screenshot 2025-02-06 043018.png" alt="Eco Adventure" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h1 class="text-4xl font-bold text-white">Eco Adventure</h1>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-8 space-y-8">
+                    <!-- Quick Links -->
+                    <div class="flex gap-4 justify-center">
+                        <a href="https://dirty-pancake.surge.sh/" target="_blank" 
+                           class="inline-flex items-center gap-2 px-6 py-3 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Jami40/ECO_ADVENTURE" target="_blank"
+                           class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-700 text-white rounded-lg hover:bg-zinc-600 transition-colors">
+                            <i class="fab fa-github"></i>
+                            GitHub Repository
+                        </a>
+                    </div>
+
+                    <!-- Technology Stack -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Technology Stack</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl text-white mb-3">Frontend</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React Router DOM</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React Icons</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React Toastify</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React Helmet Async</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl text-white mb-3">Styling</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Tailwind CSS</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">DaisyUI</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Animate.css</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl text-white mb-3">Backend & Database</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Firebase Authentication</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Firebase Database</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Firebase Hosting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Description -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Project Description</h2>
+                        <p class="text-gray-300 leading-relaxed">
+                            Eco Adventure is a modern travel and adventure booking platform that connects nature enthusiasts 
+                            with unique eco-friendly travel experiences. The platform features user authentication, dynamic routing, 
+                            interactive UI components, and real-time updates powered by Firebase.
+                        </p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Key Features</h2>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>User authentication and profile management</li>
+                            <li>Dynamic adventure package listings</li>
+                            <li>Interactive UI with smooth animations</li>
+                            <li>Responsive design for all devices</li>
+                            <li>Real-time updates using Firebase</li>
+                        </ul>
+                    </div>
+
+                    <!-- Challenges Faced -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Challenges Faced</h2>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Implementing secure user authentication with Firebase</li>
+                            <li>Creating responsive and animated UI components</li>
+                            <li>Managing complex state across multiple components</li>
+                            <li>Optimizing performance with real-time Firebase updates</li>
+                        </ul>
+                    </div>
+
+                    <!-- Future Improvements -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Future Improvements</h2>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Adding a booking and payment system</li>
+                            <li>Implementing user reviews and ratings</li>
+                            <li>Adding a map integration for adventure locations</li>
+                            <li>Enhanced mobile responsiveness and offline capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#151925] border-t border-zinc-700">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="flex justify-between items-center">
+                <div class="text-gray-400">&copy; 2024 Portfolio. All rights reserved.</div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

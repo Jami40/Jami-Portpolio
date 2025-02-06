@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Service Review System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-[#0F172A] min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-[#151925] border-b border-zinc-700 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-white text-xl font-bold">Portfolio</a>
+                <div class="flex space-x-4">
+                    <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2">Home</a>
+                    <a href="index.html#about" class="text-gray-300 hover:text-white px-3 py-2">About</a>
+                    <a href="index.html#projects" class="text-gray-300 hover:text-white px-3 py-2">Projects</a>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-white px-3 py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Details Content -->
+    <main class="flex-grow">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden">
+                <!-- Project Header -->
+                <div class="relative h-full">
+                    <img src="images/Screenshot 2025-02-06 043834.png" alt="Service Review System" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <h1 class="text-4xl font-bold text-white">Service Review System</h1>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-8 space-y-8">
+                    <!-- Quick Links -->
+                    <div class="flex gap-4 justify-center">
+                        <a href="https://screeching-day.surge.sh/" target="_blank" 
+                           class="inline-flex items-center gap-2 px-6 py-3 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Jami40/SERVICE_REVIEW_SYSTEM_CLIENT" target="_blank"
+                           class="inline-flex items-center gap-2 px-6 py-3 bg-zinc-700 text-white rounded-lg hover:bg-zinc-600 transition-colors">
+                            <i class="fab fa-github"></i>
+                            GitHub Repository
+                        </a>
+                    </div>
+
+                    <!-- Project Description -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Project Description</h2>
+                        <p class="text-gray-300 leading-relaxed">
+                            A comprehensive service review platform that allows users to rate and review various services. 
+                            The system features a modern UI, real-time updates, and a robust rating system to help users 
+                            make informed decisions based on community feedback.
+                        </p>
+                    </div>
+
+                    <!-- Technology Stack -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Technology Stack</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl text-white mb-3">Frontend</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React Router DOM</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React Icons</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React Rating</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">React Toastify</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl text-white mb-3">Styling</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Tailwind CSS</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">DaisyUI</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl text-white mb-3">API and Utilities</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Axios</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Firebase</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">LocalForage</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">SweetAlert2</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Match Sorter</span>
+                                    <span class="px-4 py-2 bg-zinc-700 text-gray-300 rounded-lg">Sort By</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Key Features</h2>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>User authentication with Firebase</li>
+                            <li>Comprehensive service rating system</li>
+                            <li>Real-time review updates</li>
+                            <li>Responsive and modern UI design</li>
+                            <li>Advanced sorting and filtering options</li>
+                            <li>Offline data persistence with LocalForage</li>
+                            <li>Interactive notifications and alerts</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Implementation -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Technical Implementation</h2>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Implemented secure user authentication using Firebase</li>
+                            <li>Built responsive UI components with Tailwind CSS and DaisyUI</li>
+                            <li>Utilized Axios for efficient API communication</li>
+                            <li>Integrated React Rating for intuitive rating interface</li>
+                            <li>Implemented client-side routing with React Router DOM</li>
+                            <li>Added data persistence with LocalForage for offline functionality</li>
+                        </ul>
+                    </div>
+
+                    <!-- Future Improvements -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold text-white">Future Improvements</h2>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Adding user profile customization</li>
+                            <li>Implementing service provider dashboards</li>
+                            <li>Adding advanced analytics and reporting</li>
+                            <li>Enhancing search functionality with filters</li>
+                            <li>Implementing a recommendation system</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#151925] border-t border-zinc-700">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="flex justify-between items-center">
+                <div class="text-gray-400">&copy; 2024 Portfolio. All rights reserved.</div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

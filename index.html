@@ -15,9 +15,6 @@
             extend: {
               colors: {
                 clifford: "#da373d",
-                "bg-prim": "#1B1B1B",
-                "border-prim": "#262626",
-                orng: "#F35034",
               },
             },
           },
@@ -27,37 +24,35 @@
         .font-bd{
             font-family: "Raleway", serif;
         }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
-<body class="bg-[#020817] min-h-screen font-bd text-gray-100">
+<body class="bg-[#0F172A] font-bd text-gray-100">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#151925] backdrop-blur-sm border-b border-zinc-700">
+    <nav class="bg-[#151925] border-b border-zinc-700 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
-                <div class="text-xl font-bold text-white">Jami's</div>
+                <a href="#" class="text-white text-xl font-bold">Portfolio</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#home" class="text-gray-300 hover:text-white px-3 py-2">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-white px-3 py-2">About</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white px-3 py-2">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white px-3 py-2">Contact</a>
+                </div>
                 <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-                <!-- Desktop menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Projects</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
-                </div>
+                <button class="md:hidden text-gray-300 hover:text-white" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-            <!-- Mobile menu (hidden by default) -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <div class="flex flex-col space-y-4">
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Projects</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block text-gray-300 hover:text-white px-3 py-2">Home</a>
+                    <a href="#about" class="block text-gray-300 hover:text-white px-3 py-2">About</a>
+                    <a href="#projects" class="block text-gray-300 hover:text-white px-3 py-2">Projects</a>
+                    <a href="#contact" class="block text-gray-300 hover:text-white px-3 py-2">Contact</a>
                 </div>
             </div>
         </div>
@@ -65,7 +60,7 @@
 
     <main class="pt-16">
         <!-- Hero Section -->
-        <div class="min-h-screen bg-[#151925] flex items-center">
+        <section id="home" class="min-h-screen bg-[#151925] flex items-center">
             <div class="max-w-6xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center justify-between gap-12">
                 <!-- Left Content -->
                 <div class="lg:w-1/2">
@@ -101,12 +96,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        
+        </section>
 
         <!-- About Me Section -->
-        <div class="bg-[#151925] py-16">
+        <section id="about" class="bg-[#151925] py-16">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-12 text-white">About Me</h2>
                 <div class="bg-zinc-800 rounded-lg p-8 border border-zinc-700">
@@ -123,7 +116,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Skills Section -->
         <div class="py-16">
@@ -152,7 +145,7 @@
                             </div>
                             <div class="flex flex-col items-center gap-2">
                                 <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#06B6D4">
-                                    <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+                                    <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8zm0 1.41l9.17 5.29v10.58L12 22.59l-9.17-5.29V6.7L12 1.41zM4.5 7.5v9l7.5 4.33v-9L4.5 7.5zm15 0l-7.5 4.33v9l7.5-4.33V7.5z"/>
                                 </svg>
                                 <span class="text-gray-300 text-sm">Tailwind</span>
                             </div>
@@ -316,26 +309,26 @@
         </div>
 
         <!-- Projects Section -->
-        <div class="max-w-6xl mx-auto px-4 py-16">
+        <div id="projects" class="max-w-6xl mx-auto px-4 py-16">
             <h2 class="text-3xl font-bold text-center mb-12 text-white">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->
                 <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:border-zinc-600 transition-colors">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="images/project1.jpg" alt="Project One" class="w-full h-full object-cover">
+                        <img src="images/Screenshot 2025-02-06 043018.png" alt="Eco Adventure" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                            <button onclick="openModal('project1')" class="px-6 py-2 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
+                            <a href="project-details.html" class="px-6 py-2 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
                                 View Details
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-white">Tech Zone</h3>
-                        <p class="text-gray-300 mb-4">A comprehensive tech gadget review platform built with MERN stack.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Eco Adventure</h3>
+                        <p class="text-gray-300 mb-4">A modern travel and adventure booking platform built with React and Firebase.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">React</span>
-                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Node.js</span>
-                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">MongoDB</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Firebase</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Tailwind</span>
                         </div>
                     </div>
                 </div>
@@ -343,20 +336,21 @@
                 <!-- Project Card 2 -->
                 <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:border-zinc-600 transition-colors">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="images/project2.jpg" alt="Project Two" class="w-full h-full object-cover">
+                        <img src="images/Screenshot 2025-02-06 043635.png" alt="MICRO TASK EARNING" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                            <button onclick="openModal('project2')" class="px-6 py-2 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
+                            <a href="project-details-micro-task.html" class="px-6 py-2 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
                                 View Details
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-white">Food Fusion</h3>
-                        <p class="text-gray-300 mb-4">An online food ordering and delivery management system.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-white">MICRO TASK EARNING</h3>
+                        <p class="text-gray-300 mb-4">A platform where users can earn money by completing micro-tasks with multi-role system and Stripe integration.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Next.js</span>
-                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Firebase</span>
-                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Tailwind</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">React</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">MongoDB</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Stripe</span>
                         </div>
                     </div>
                 </div>
@@ -364,125 +358,161 @@
                 <!-- Project Card 3 -->
                 <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:border-zinc-600 transition-colors">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="images/project3.jpg" alt="Project Three" class="w-full h-full object-cover">
+                        <img src="images/Screenshot 2025-02-06 043834.png" alt="Service Review System" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                            <button onclick="openModal('project3')" class="px-6 py-2 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
+                            <a href="project-details-service-review.html" class="px-6 py-2 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
                                 View Details
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-white">Task Master</h3>
-                        <p class="text-gray-300 mb-4">A collaborative task management and team organization platform.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Service Review System</h3>
+                        <p class="text-gray-300 mb-4">A comprehensive platform for rating and reviewing services with real-time updates and Firebase integration.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">React</span>
-                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Express</span>
-                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">MongoDB</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Firebase</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Tailwind</span>
+                            <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Axios</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Project Modals -->
-        <div id="project1Modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-            <div class="min-h-screen px-4 text-center">
-                <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-                    <div class="absolute inset-0 bg-black opacity-75"></div>
-                </div>
-                <span class="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
-                <div class="inline-block w-full max-w-3xl p-6 my-8 text-left align-middle transition-all transform bg-zinc-800 rounded-lg border border-zinc-700 shadow-xl">
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-2xl font-semibold text-white mb-4">Tech Zone</h3>
-                        <button onclick="closeModal('project1')" class="text-gray-400 hover:text-white">
-                            <i class="fas fa-times text-xl"></i>
-                        </button>
+        <!-- Contact Section -->
+        <div id="contact" class="bg-[#151925] py-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white">Get In Touch</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Contact Information -->
+                    <div class="bg-zinc-800 rounded-lg border border-zinc-700 p-8">
+                        <h3 class="text-2xl font-semibold text-white mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <!-- Email -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-[#FF7B5C] rounded-lg flex items-center justify-center text-white">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">Email</p>
+                                    <a href="mailto:jnjami40@gmail.com" class="text-white hover:text-[#FF7B5C] transition-colors">
+                                        jnjami40@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-[#FF7B5C] rounded-lg flex items-center justify-center text-white">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">Phone</p>
+                                    <a href="tel:01887994468" class="text-white hover:text-[#FF7B5C] transition-colors">
+                                        01887994468
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- WhatsApp -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-[#FF7B5C] rounded-lg flex items-center justify-center text-white">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">WhatsApp</p>
+                                    <a href="https://wa.me/01887994468" target="_blank" class="text-white hover:text-[#FF7B5C] transition-colors">
+                                        01887994468
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-[#FF7B5C] rounded-lg flex items-center justify-center text-white">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/jn-jami-1455112a9/" target="_blank" class="text-white hover:text-[#FF7B5C] transition-colors">
+                                        JN Jami
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- GitHub -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-[#FF7B5C] rounded-lg flex items-center justify-center text-white">
+                                    <i class="fab fa-github text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">GitHub</p>
+                                    <a href="https://github.com/Jami40" target="_blank" class="text-white hover:text-[#FF7B5C] transition-colors">
+                                        Jami40
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Twitter -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-[#FF7B5C] rounded-lg flex items-center justify-center text-white">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">Twitter</p>
+                                    <a href="https://x.com/JamiJn93343" target="_blank" class="text-white hover:text-[#FF7B5C] transition-colors">
+                                        @JamiJn93343
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <img src="images/project1.jpg" alt="Tech Zone" class="w-full h-64 object-cover rounded-lg mb-6">
-                    <div class="space-y-4">
-                        <div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Technology Stack</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">React</span>
-                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Node.js</span>
-                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Express.js</span>
-                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">MongoDB</span>
-                                <span class="px-3 py-1 bg-zinc-700 text-sm text-gray-300 rounded-full">Tailwind CSS</span>
+
+                    <!-- Contact Form -->
+                    <div class="bg-zinc-800 rounded-lg border border-zinc-700 p-8">
+                        <h3 class="text-2xl font-semibold text-white mb-6">Send Message</h3>
+                        <form class="space-y-6" action="mailto:jnjami40@gmail.com" method="POST" enctype="text/plain" onsubmit="return formatEmail(event)">
+                            <div>
+                                <label for="name" class="block text-gray-400 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required
+                                       class="w-full px-4 py-2 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:outline-none focus:border-[#FF7B5C]">
                             </div>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Description</h4>
-                            <p class="text-gray-300">A comprehensive tech gadget review platform where users can explore, review, and discuss the latest technology products. Features include user authentication, product reviews, ratings, and a dynamic comment system.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Links</h4>
-                            <div class="flex gap-4">
-                                <a href="https://tech-zone-demo.vercel.app" target="_blank" class="flex items-center gap-2 text-[#FF7B5C] hover:text-[#ff6b4a]">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Live Demo
-                                </a>
-                                <a href="https://github.com/username/tech-zone" target="_blank" class="flex items-center gap-2 text-[#FF7B5C] hover:text-[#ff6b4a]">
-                                    <i class="fab fa-github"></i>
-                                    GitHub Repository
-                                </a>
+                            <div>
+                                <label for="email" class="block text-gray-400 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full px-4 py-2 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:outline-none focus:border-[#FF7B5C]">
                             </div>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Challenges Faced</h4>
-                            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                                <li>Implementing real-time comment updates using WebSocket</li>
-                                <li>Optimizing image loading and caching for better performance</li>
-                                <li>Managing complex state with multiple user interactions</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-semibold text-white mb-2">Future Improvements</h4>
-                            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                                <li>Adding AI-powered product recommendations</li>
-                                <li>Implementing a price comparison feature</li>
-                                <li>Adding video reviews and demonstrations</li>
-                            </ul>
-                        </div>
+                            <div>
+                                <label for="message" class="block text-gray-400 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" required
+                                          class="w-full px-4 py-2 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:outline-none focus:border-[#FF7B5C]"></textarea>
+                            </div>
+                            <button type="submit" 
+                                    class="w-full px-6 py-3 bg-[#FF7B5C] text-white rounded-lg hover:bg-[#ff6b4a] transition-colors">
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Similar modals for Project 2 and 3 -->
-        <div id="project2Modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-            <!-- Similar structure as project1Modal -->
-        </div>
-
-        <div id="project3Modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-            <!-- Similar structure as project1Modal -->
-        </div>
-
-        <!-- Add Modal JavaScript -->
-        <script>
-            function openModal(projectId) {
-                document.getElementById(projectId + 'Modal').classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeModal(projectId) {
-                document.getElementById(projectId + 'Modal').classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
-
-            // Close modal when clicking outside
-            window.onclick = function(event) {
-                if (event.target.classList.contains('fixed')) {
-                    event.target.classList.add('hidden');
-                    document.body.style.overflow = 'auto';
-                }
-            }
-        </script>
 
         <!-- Footer -->
-        <footer class="bg-zinc-800 border-t border-zinc-700">
+        <footer class="bg-[#151925] border-t border-zinc-700">
             <div class="max-w-6xl mx-auto px-4 py-8">
-                <div class="text-center">
-                    <p class="text-gray-300">&copy; 2025 My Portfolio. All rights reserved.</p>
+                <div class="flex justify-between items-center">
+                    <div class="text-gray-400">&copy; 2024 Jami's Portfolio. All rights reserved.</div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Jami40" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jn-jami-1455112a9/" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://x.com/JamiJn93343" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -495,6 +525,18 @@
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
+        </script>
+        <script>
+            function formatEmail(event) {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                const form = event.target;
+                form.action = `mailto:jnjami40@gmail.com?subject=Portfolio Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+                
+                return true;
+            }
         </script>
     </body>
 </html>
