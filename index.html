@@ -27,7 +27,70 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Profile image float animation */
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Fade in animation for sections */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Slide in from left */
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Slide in from right */
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Scale up animation */
+        .scale-up {
+            animation: scaleUp 0.5s ease-out;
+        }
+        @keyframes scaleUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Skill icon hover effect */
+        .skill-icon {
+            transition: transform 0.3s ease;
+        }
+        .skill-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Project card hover effect */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
     </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-[#0F172A] font-bd text-gray-100">
     <!-- Navigation -->
@@ -63,10 +126,10 @@
         <section id="home" class="min-h-screen bg-[#151925] flex items-center">
             <div class="max-w-6xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center justify-between gap-12">
                 <!-- Left Content -->
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 slide-in-left">
                     <h1 class="text-5xl font-bold text-white mb-4">Sumsed Tareq Jami</h1>
                     <p class="text-xl text-gray-400 mb-4">Mern Stack Web Developer</p>
-                    <p class="text-gray-400 mb-8">Explore the innovative solutions I've developed across various technologies. Each project reflects my passion for software development and commitment to continuous learning..</p>
+                    <p class="text-gray-400 mb-8">Explore the innovative solutions I've developed across various technologies. Each project reflects my passion for software development and commitment to continuous learning.</p>
                     <div class="flex flex-wrap gap-4">
                         <button class="border border-gray-600 text-white px-6 py-2 rounded flex items-center gap-2 hover:border-gray-400 transition-colors">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,14 +148,12 @@
                     </div>
                 </div>
                 <!-- Right Image -->
-                <div class="lg:w-1/2 flex justify-center">
+                <div class="lg:w-1/2 flex justify-center slide-in-right">
                     <div class="relative w-[400px] h-[400px]">
                         <div class="absolute inset-0 rounded-full bg-[#FF7B5C]"></div>
-                        <img 
-                            src="images/380334301_1642951886205073_80166280723183857_n (1).jpg" 
-                            alt="Sumsed Tareq Jami" 
-                            class="absolute inset-0 w-full h-full object-cover rounded-full"
-                        >
+                        <img src="images/380334301_1642951886205073_80166280723183857_n (1).jpg" 
+                             alt="Sumsed Tareq Jami" 
+                             class="absolute inset-0 w-full h-full object-cover rounded-full float-animation">
                     </div>
                 </div>
             </div>
@@ -101,8 +162,8 @@
         <!-- About Me Section -->
         <section id="about" class="bg-[#151925] py-16">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-white">About Me</h2>
-                <div class="bg-zinc-800 rounded-lg p-8 border border-zinc-700">
+                <h2 class="text-3xl font-bold text-center mb-12 text-white fade-in">About Me</h2>
+                <div class="bg-zinc-800 rounded-lg p-8 border border-zinc-700 scale-up">
                     <div class="space-y-6 text-gray-300">
                         <p class="leading-relaxed">
                             Hello! I'm Sumsed Tareq Jami, a passionate MERN Stack developer with a deep love for creating innovative web solutions. My journey in programming began with a curiosity about how websites work, which led me to dive deep into web development.
@@ -121,53 +182,53 @@
         <!-- Skills Section -->
         <div class="py-16">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-white">Skills</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 text-white fade-in">Skills</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     <!-- Frontend Skills -->
-                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700 scale-up">
                         <h3 class="text-xl font-semibold mb-6 text-white text-center">Frontend</h3>
                         <div class="grid grid-cols-3 gap-6">
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fab fa-react text-4xl text-[#61DAFB] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">React</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fab fa-js text-4xl text-[#F7DF1E] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">JavaScript</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fab fa-html5 text-4xl text-[#E34F26] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">HTML5</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fab fa-css3-alt text-4xl text-[#1572B6] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">CSS3</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#06B6D4">
-                                    <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8zm0 1.41l9.17 5.29v10.58L12 22.59l-9.17-5.29V6.7L12 1.41zM4.5 7.5v9l7.5 4.33v-9L4.5 7.5zm15 0l-7.5 4.33v9l7.5-4.33V7.5z"/>
+                                    <path d="M12 0L1.605 6v12L12 24l10.395-6V6L12 0zm0 1.41l9.17 5.29v10.58L12 22.59l-9.17-5.29V6.7L12 1.41zM4.5 7.5v9l7.5 4.33v-9L4.5 7.5zm15 0l-7.5 4.33v9l7.5-4.33V7.5z"/>
                                 </svg>
                                 <span class="text-gray-300 text-sm">Tailwind</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#000000">
                                     <path d="M11.5725 0c-.1763 0-.3098.0013-.3584.0067-.0516.0053-.2159.021-.3636.0328-3.4088.3073-6.6017 2.1463-8.624 4.9728C1.1004 6.584.3802 8.3666.1082 10.255c-.0962.659-.108.8537-.108 1.7474s.012 1.0884.108 1.7476c.652 4.506 3.8591 8.2919 8.2087 9.6945.7789.2511 1.6.4223 2.5337.5255.3636.04 1.9354.04 2.299 0 1.6117-.1783 2.9772-.577 4.3237-1.2643.2065-.1056.2464-.1337.2183-.1573-.0188-.0139-.8987-1.1938-1.9543-2.62l-1.919-2.592-2.4047-3.5583c-1.3231-1.9564-2.4117-3.556-2.4211-3.556-.0094-.0026-.0187 1.5787-.0235 3.509-.0067 3.3802-.0093 3.5162-.0516 3.596-.061.115-.108.1618-.2064.2134-.075.0374-.1408.0445-.495.0445h-.406l-.1078-.068a.4383.4383 0 01-.1572-.1712l-.0493-.1056.0053-4.703.0067-4.7054.0726-.0915c.0376-.0493.1174-.1125.1736-.143.0962-.047.1338-.0517.5396-.0517.4787 0 .5584.0187.6827.1547.0353.0377 1.3373 1.9987 2.895 4.3608a10760.433 10760.433 0 004.7344 7.1706l1.9002 2.8782.096-.0633c.8518-.5536 1.7525-1.3418 2.4657-2.1627 1.5179-1.7429 2.4963-3.868 2.8247-6.134.0961-.6591.1078-.854.1078-1.7475 0-.8937-.012-1.0884-.1078-1.7476-.6522-4.506-3.8592-8.2919-8.2087-9.6945-.7672-.2487-1.5836-.42-2.4985-.5232-.169-.0176-1.0835-.0366-1.6123-.037zm4.0685 7.217c.3473 0 .4082.0053.4857.047.1127.0562.204.1642.237.2767.0186.061.0234 1.3653.0186 4.3044l-.0067 4.2175-.7436-1.14-.7461-1.14v-3.066c0-1.982.0093-3.0963.0234-3.1502.0375-.1313.1196-.2346.2323-.2955.0961-.0494.1313-.054.4997-.054z"/>
                                 </svg>
                                 <span class="text-gray-300 text-sm">Next.js</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#00599C">
-                                    <path d="M10.465 11.993h2.015v-1.058h-2.015v1.058zm3.075 0h2.015v-1.058h-2.015v1.058zm-6.15 0h2.015v-1.058H7.39v1.058zm-3.075 0h2.015v-1.058H4.315v1.058zm6.15-2.117h2.015V8.818h-2.015v1.058zm3.075 0h2.015V8.818h-2.015v1.058zm-6.15 0h2.015V8.818H7.39v1.058zm-3.075 0h2.015V8.818H4.315v1.058zm12.3-5.29h-1.058V2.528h-1.058v2.058h-1.058v1.058h1.058v2.058h1.058V5.644h1.058V4.586zm-9.225 7.407h2.015v-1.058h-2.015v1.058zm3.075 0h2.015v-1.058h-2.015v1.058zm-6.15 0h2.015v-1.058H7.39v1.058zm-3.075 0h2.015v-1.058H4.315v1.058zm9.225-4.234h2.015V6.702h-2.015v1.058zm3.075 0h2.015V6.702h-2.015v1.058zm-6.15 0h2.015V6.702H7.39v1.058zm-3.075 0h2.015V6.702H4.315v1.058zm6.15 2.117h2.015V8.818h-2.015v1.058z"/>
+                                    <path d="M12 0L1.605 6v12L12 24l10.395-6V6L12 0zm0 1.41l9.17 5.29v10.58L12 22.59l-9.17-5.29V6.7L12 1.41zM4.5 7.5v9l7.5 4.33v-9L4.5 7.5zm15 0l-7.5 4.33v9l7.5-4.33V7.5z"/>
                                 </svg>
                                 <span class="text-gray-300 text-sm">C</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#00599C">
                                     <path d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.11-7.11a7.133 7.133 0 016.156 3.553l-3.076 1.78a3.567 3.567 0 00-3.08-1.78A3.56 3.56 0 008.444 12 3.56 3.56 0 0012 15.555a3.57 3.57 0 003.08-1.778l3.078 1.78A7.135 7.135 0 0112 19.11zm7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/>
                                 </svg>
                                 <span class="text-gray-300 text-sm">C++</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#FFCA28">
                                     <path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z"/>
                                 </svg>
@@ -177,18 +238,18 @@
                     </div>
 
                     <!-- Backend Skills -->
-                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700 scale-up">
                         <h3 class="text-xl font-semibold mb-6 text-white text-center">Backend</h3>
                         <div class="grid grid-cols-3 gap-6">
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fab fa-node-js text-4xl text-[#339933] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">Node.js</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fab fa-node-js text-4xl text-[#000000] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">Express</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#47A248">
                                     <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"/>
                                 </svg>
@@ -198,32 +259,32 @@
                     </div>
 
                     <!-- Tools -->
-                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700 scale-up">
                         <h3 class="text-xl font-semibold mb-6 text-white text-center">Tools</h3>
                         <div class="grid grid-cols-3 gap-6">
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fab fa-git-alt text-4xl text-[#F05032] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">Git</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fab fa-github text-4xl text-white hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">GitHub</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fas fa-code text-4xl text-[#007ACC] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">VS Code</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fas fa-terminal text-4xl text-white hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">Terminal</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#000000">
                                     <path d="M24 22.525H0l12-21.05 12 21.05z"/>
                                 </svg>
                                 <span class="text-gray-300 text-sm">Vercel</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <svg class="w-10 h-10 hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="#3AAFA9">
                                     <path d="M12 0L1.605 6v12L12 24l10.395-6V6L12 0zm0 1.41l9.17 5.29v10.58L12 22.59l-9.17-5.29V6.7L12 1.41zM4.5 7.5v9l7.5 4.33v-9L4.5 7.5zm15 0l-7.5 4.33v9l7.5-4.33V7.5z"/>
                                 </svg>
@@ -233,18 +294,18 @@
                     </div>
 
                     <!-- Other Skills -->
-                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700 scale-up">
                         <h3 class="text-xl font-semibold mb-6 text-white text-center">Other</h3>
                         <div class="grid grid-cols-3 gap-6">
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fas fa-mobile-alt text-4xl text-[#FF7B5C] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">Responsive</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fas fa-paint-brush text-4xl text-[#FF7B5C] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">UI/UX</span>
                             </div>
-                            <div class="flex flex-col items-center gap-2">
+                            <div class="flex flex-col items-center gap-2 skill-icon">
                                 <i class="fas fa-code-branch text-4xl text-[#FF7B5C] hover:scale-110 transition-transform"></i>
                                 <span class="text-gray-300 text-sm">Version Control</span>
                             </div>
@@ -257,10 +318,10 @@
         <!-- Experience Section -->
         <div class="bg-[#151925] py-16">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-white">Experience</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 text-white fade-in">Experience</h2>
                 <div class="space-y-8">
                     <!-- Experience Item 1 -->
-                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700 scale-up">
                         <div class="flex items-start gap-4">
                             <div class="text-[#FF7B5C] text-2xl">
                                 <i class="fas fa-briefcase"></i>
@@ -284,10 +345,10 @@
         <!-- Education Section -->
         <div class="bg-[#151925] py-16">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-white">Education</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 text-white fade-in">Education</h2>
                 <div class="space-y-8">
                     <!-- Education Item 1 -->
-                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700">
+                    <div class="bg-zinc-800 rounded-lg p-6 border border-zinc-700 scale-up">
                         <div class="flex items-start gap-4">
                             <div class="text-[#FF7B5C] text-2xl">
                                 <i class="fas fa-graduation-cap"></i>
@@ -310,10 +371,10 @@
 
         <!-- Projects Section -->
         <div id="projects" class="max-w-6xl mx-auto px-4 py-16">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">My Projects</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-white fade-in">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->
-                <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:border-zinc-600 transition-colors">
+                <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden project-card fade-in">
                     <div class="relative h-48 overflow-hidden">
                         <img src="images/Screenshot 2025-02-06 043018.png" alt="Eco Adventure" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
@@ -334,7 +395,7 @@
                 </div>
 
                 <!-- Project Card 2 -->
-                <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:border-zinc-600 transition-colors">
+                <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden project-card fade-in">
                     <div class="relative h-48 overflow-hidden">
                         <img src="images/Screenshot 2025-02-06 043635.png" alt="MICRO TASK EARNING" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
@@ -356,7 +417,7 @@
                 </div>
 
                 <!-- Project Card 3 -->
-                <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden hover:border-zinc-600 transition-colors">
+                <div class="bg-zinc-800 rounded-lg border border-zinc-700 overflow-hidden project-card fade-in">
                     <div class="relative h-48 overflow-hidden">
                         <img src="images/Screenshot 2025-02-06 043834.png" alt="Service Review System" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
@@ -382,10 +443,10 @@
         <!-- Contact Section -->
         <div id="contact" class="bg-[#151925] py-16">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 text-white">Get In Touch</h2>
+                <h2 class="text-3xl font-bold text-center mb-12 text-white fade-in">Get In Touch</h2>
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Contact Information -->
-                    <div class="bg-zinc-800 rounded-lg border border-zinc-700 p-8">
+                    <div class="bg-zinc-800 rounded-lg border border-zinc-700 p-8 slide-in-left">
                         <h3 class="text-2xl font-semibold text-white mb-6">Contact Information</h3>
                         <div class="space-y-6">
                             <!-- Email -->
@@ -469,7 +530,7 @@
                     </div>
 
                     <!-- Contact Form -->
-                    <div class="bg-zinc-800 rounded-lg border border-zinc-700 p-8">
+                    <div class="bg-zinc-800 rounded-lg border border-zinc-700 p-8 slide-in-right">
                         <h3 class="text-2xl font-semibold text-white mb-6">Send Message</h3>
                         <form class="space-y-6" action="mailto:jnjami40@gmail.com" method="POST" enctype="text/plain" onsubmit="return formatEmail(event)">
                             <div>
@@ -519,6 +580,7 @@
 
         <!-- Add JavaScript for mobile menu toggle -->
         <script>
+            // Mobile menu toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
